@@ -24,8 +24,11 @@ class ListOfMoviesPresenter {
     func onViewAppear() {
         Task {
             let models = await listOfMoviesInteractor.getListOfMovies().results
-            let movieViewModels = models.map { entity in
-                MovieViewModel(title: entity.title, overview: entity.overview, imageURL: entity.imageURL)
+            //Me petaba porque habia puesto let movieViewModels
+            movieViewModels = models.map { entity in
+                MovieViewModel(title: entity.title, 
+                               overview: entity.overview,
+                               imageURL: entity.imageURL)
             }
             ui?.update(movies: movieViewModels)
         }
