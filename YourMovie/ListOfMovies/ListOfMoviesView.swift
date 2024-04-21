@@ -18,9 +18,10 @@ class ListOfMoviesView: UIViewController {
         return tableView
     }()
     
-    var presenter: ListOfMoviesPresenter?
+    private let presenter: ListOfMoviesPresentable
     
-    init() {
+    init(presenter: ListOfMoviesPresentable) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,7 +34,7 @@ class ListOfMoviesView: UIViewController {
         
         view.backgroundColor = .blue
         setupTableView()
-        presenter?.onViewAppear()
+        presenter.onViewAppear()
     }
     
     private func setupTableView() {
@@ -61,12 +62,12 @@ extension ListOfMoviesView: ListOfMoviesUI {
 
 extension ListOfMoviesView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter!.movieViewModels.count
+        presenter.movieViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCellView", for: indexPath) as! MovieCellView
-        let model = presenter!.movieViewModels[indexPath.row]
+        let model = presenter.movieViewModels[indexPath.row]
         
         cell.configure(model: model)
         

@@ -21,6 +21,7 @@
 		25AC3E582BD40C7D0083593F /* MovieCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E572BD40C7D0083593F /* MovieCellView.swift */; };
 		25AC3E5B2BD50CFD0083593F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 25AC3E5A2BD50CFD0083593F /* Kingfisher */; };
 		25AC3E602BD512760083593F /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E5F2BD512760083593F /* MovieViewModel.swift */; };
+		25AC3E622BD51EA30083593F /* MovieMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E612BD51EA30083593F /* MovieMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		25AC3E552BD405850083593F /* PopularMovieResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieResponseEntity.swift; sourceTree = "<group>"; };
 		25AC3E572BD40C7D0083593F /* MovieCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellView.swift; sourceTree = "<group>"; };
 		25AC3E5F2BD512760083593F /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		25AC3E612BD51EA30083593F /* MovieMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				25AC3E5F2BD512760083593F /* MovieViewModel.swift */,
+				25AC3E612BD51EA30083593F /* MovieMapper.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				25AC3E512BD402D60083593F /* ListOfMoviesRouter.swift in Sources */,
 				25AC3E352BD402000083593F /* AppDelegate.swift in Sources */,
 				25AC3E602BD512760083593F /* MovieViewModel.swift in Sources */,
+				25AC3E622BD51EA30083593F /* MovieMapper.swift in Sources */,
 				25AC3E562BD405850083593F /* PopularMovieResponseEntity.swift in Sources */,
 				25AC3E372BD402000083593F /* SceneDelegate.swift in Sources */,
 			);
