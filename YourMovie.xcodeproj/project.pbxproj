@@ -10,9 +10,17 @@
 		25AC3E352BD402000083593F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E342BD402000083593F /* AppDelegate.swift */; };
 		25AC3E372BD402000083593F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E362BD402000083593F /* SceneDelegate.swift */; };
 		25AC3E392BD402000083593F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E382BD402000083593F /* ViewController.swift */; };
-		25AC3E3C2BD402000083593F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25AC3E3B2BD402000083593F /* Base */; };
 		25AC3E3E2BD402020083593F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25AC3E3D2BD402020083593F /* Assets.xcassets */; };
 		25AC3E412BD402020083593F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25AC3E402BD402020083593F /* Base */; };
+		25AC3E4B2BD402B40083593F /* ListOfMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E4A2BD402B40083593F /* ListOfMoviesView.swift */; };
+		25AC3E4D2BD402C20083593F /* ListOfMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E4C2BD402C20083593F /* ListOfMoviesPresenter.swift */; };
+		25AC3E4F2BD402CD0083593F /* ListOfMoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E4E2BD402CD0083593F /* ListOfMoviesInteractor.swift */; };
+		25AC3E512BD402D60083593F /* ListOfMoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E502BD402D60083593F /* ListOfMoviesRouter.swift */; };
+		25AC3E542BD404C50083593F /* PopularMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E532BD404C50083593F /* PopularMovieEntity.swift */; };
+		25AC3E562BD405850083593F /* PopularMovieResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E552BD405850083593F /* PopularMovieResponseEntity.swift */; };
+		25AC3E582BD40C7D0083593F /* MovieCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E572BD40C7D0083593F /* MovieCellView.swift */; };
+		25AC3E5B2BD50CFD0083593F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 25AC3E5A2BD50CFD0083593F /* Kingfisher */; };
+		25AC3E602BD512760083593F /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AC3E5F2BD512760083593F /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,17 @@
 		25AC3E342BD402000083593F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25AC3E362BD402000083593F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25AC3E382BD402000083593F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		25AC3E3B2BD402000083593F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25AC3E3D2BD402020083593F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25AC3E402BD402020083593F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25AC3E422BD402020083593F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25AC3E4A2BD402B40083593F /* ListOfMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesView.swift; sourceTree = "<group>"; };
+		25AC3E4C2BD402C20083593F /* ListOfMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesPresenter.swift; sourceTree = "<group>"; };
+		25AC3E4E2BD402CD0083593F /* ListOfMoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesInteractor.swift; sourceTree = "<group>"; };
+		25AC3E502BD402D60083593F /* ListOfMoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesRouter.swift; sourceTree = "<group>"; };
+		25AC3E532BD404C50083593F /* PopularMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieEntity.swift; sourceTree = "<group>"; };
+		25AC3E552BD405850083593F /* PopularMovieResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieResponseEntity.swift; sourceTree = "<group>"; };
+		25AC3E572BD40C7D0083593F /* MovieCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellView.swift; sourceTree = "<group>"; };
+		25AC3E5F2BD512760083593F /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25AC3E5B2BD50CFD0083593F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +75,43 @@
 				25AC3E342BD402000083593F /* AppDelegate.swift */,
 				25AC3E362BD402000083593F /* SceneDelegate.swift */,
 				25AC3E382BD402000083593F /* ViewController.swift */,
-				25AC3E3A2BD402000083593F /* Main.storyboard */,
+				25AC3E492BD4023F0083593F /* ListOfMovies */,
 				25AC3E3D2BD402020083593F /* Assets.xcassets */,
 				25AC3E3F2BD402020083593F /* LaunchScreen.storyboard */,
 				25AC3E422BD402020083593F /* Info.plist */,
 			);
 			path = YourMovie;
+			sourceTree = "<group>";
+		};
+		25AC3E492BD4023F0083593F /* ListOfMovies */ = {
+			isa = PBXGroup;
+			children = (
+				25AC3E522BD402DE0083593F /* Entities */,
+				25AC3E4A2BD402B40083593F /* ListOfMoviesView.swift */,
+				25AC3E4C2BD402C20083593F /* ListOfMoviesPresenter.swift */,
+				25AC3E4E2BD402CD0083593F /* ListOfMoviesInteractor.swift */,
+				25AC3E502BD402D60083593F /* ListOfMoviesRouter.swift */,
+				25AC3E572BD40C7D0083593F /* MovieCellView.swift */,
+				25AC3E5C2BD5123C0083593F /* ViewModel */,
+			);
+			path = ListOfMovies;
+			sourceTree = "<group>";
+		};
+		25AC3E522BD402DE0083593F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				25AC3E532BD404C50083593F /* PopularMovieEntity.swift */,
+				25AC3E552BD405850083593F /* PopularMovieResponseEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		25AC3E5C2BD5123C0083593F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25AC3E5F2BD512760083593F /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +130,9 @@
 			dependencies = (
 			);
 			name = YourMovie;
+			packageProductDependencies = (
+				25AC3E5A2BD50CFD0083593F /* Kingfisher */,
+			);
 			productName = YourMovie;
 			productReference = 25AC3E312BD402000083593F /* YourMovie.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +161,9 @@
 				Base,
 			);
 			mainGroup = 25AC3E282BD402000083593F;
+			packageReferences = (
+				25AC3E592BD50CFD0083593F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 25AC3E322BD402000083593F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +180,6 @@
 			files = (
 				25AC3E3E2BD402020083593F /* Assets.xcassets in Resources */,
 				25AC3E412BD402020083593F /* Base in Resources */,
-				25AC3E3C2BD402000083593F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25AC3E4B2BD402B40083593F /* ListOfMoviesView.swift in Sources */,
 				25AC3E392BD402000083593F /* ViewController.swift in Sources */,
+				25AC3E4F2BD402CD0083593F /* ListOfMoviesInteractor.swift in Sources */,
+				25AC3E582BD40C7D0083593F /* MovieCellView.swift in Sources */,
+				25AC3E542BD404C50083593F /* PopularMovieEntity.swift in Sources */,
+				25AC3E4D2BD402C20083593F /* ListOfMoviesPresenter.swift in Sources */,
+				25AC3E512BD402D60083593F /* ListOfMoviesRouter.swift in Sources */,
 				25AC3E352BD402000083593F /* AppDelegate.swift in Sources */,
+				25AC3E602BD512760083593F /* MovieViewModel.swift in Sources */,
+				25AC3E562BD405850083593F /* PopularMovieResponseEntity.swift in Sources */,
 				25AC3E372BD402000083593F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		25AC3E3A2BD402000083593F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				25AC3E3B2BD402000083593F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		25AC3E3F2BD402020083593F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +349,6 @@
 				INFOPLIST_FILE = YourMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +376,6 @@
 				INFOPLIST_FILE = YourMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25AC3E592BD50CFD0083593F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25AC3E5A2BD50CFD0083593F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25AC3E592BD50CFD0083593F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 25AC3E292BD402000083593F /* Project object */;
 }
