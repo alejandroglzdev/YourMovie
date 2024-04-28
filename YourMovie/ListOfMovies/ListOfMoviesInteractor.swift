@@ -10,15 +10,22 @@ import Foundation
 // abb2dd61afef88daf0476ef54d1bfb56
 
 protocol ListOfMoviesInteractable: AnyObject {
-    func getListOfMovies() async -> PopularMovieResponseEntity
+    func getListOfMovies() async throws -> PopularMovieResponseEntity
 }
 
 class ListOfMoviesInteractor: ListOfMoviesInteractable {
-    func getListOfMovies() async -> PopularMovieResponseEntity {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=abb2dd61afef88daf0476ef54d1bfb56")!
-        let(data, _) = try! await URLSession.shared.data(from: url)
+    func getListOfMovies() async throws -> PopularMovieResponseEntity {
+        guard let url = URL(string: K.API.baseURL + K.API.endpointPopularMovies + K.API.apiKey)
+        else {
+            throw URLError(.badURL)
+        }
         
-        return try! JSONDecoder().decode(PopularMovieResponseEntity.self, from: data)
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return try JSONDecoder().decode(PopularMovieResponseEntity.self, from: data)
+        } catch {
+            throw error
+        }
     }
 }
 
