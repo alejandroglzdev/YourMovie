@@ -15,12 +15,15 @@ struct DetailMovieEntity: Decodable {
     let releaseDate: String
     let voteAverage: Float
     let voteCount: Int
+    let runtime: Int
+    let originalLanguage: String
     
     enum CodingKeys: String, CodingKey {
-        case title, overview, status
+        case title, overview, status, runtime
         case voteCount = "vote_count"
         case voteAverage = "vote_average"
         case releaseDate = "release_date"
         case backdropPath = "backdrop_path"
+        case originalLanguage = "original_language"
     }
 }

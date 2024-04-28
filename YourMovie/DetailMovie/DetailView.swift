@@ -53,7 +53,7 @@ class DetailView: UIViewController {
         return imageView
     } ()
     
-    let voteAverageFourthStar :UIImageView = {
+    let voteAverageFourthStar: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -73,7 +73,33 @@ class DetailView: UIViewController {
         return label
     }()
     
+    let releaseDateImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    } ()
     
+    let languageImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    } ()
+    
+    let releaseDateLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 12, weight: .light, width: .standard)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let languageLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 12, weight: .light, width: .standard)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     init(presenter: DetailPresentable) {
         self.presenter = presenter
@@ -101,6 +127,14 @@ class DetailView: UIViewController {
         starsContainer.addSubview(voteAverageFifthStar)
         starsContainer.addSubview(movieVoteCount)
         
+        let otherDetailsContainer = UIView()
+        otherDetailsContainer.translatesAutoresizingMaskIntoConstraints = false
+        otherDetailsContainer.addSubview(releaseDateImageView)
+        otherDetailsContainer.addSubview(releaseDateLabel)
+        otherDetailsContainer.addSubview(languageImageView)
+        otherDetailsContainer.addSubview(languageLabel)
+        
+        view.addSubview(otherDetailsContainer)
         view.addSubview(starsContainer)
         view.addSubview(movieImageView)
         view.addSubview(movieNameLabel)
@@ -117,9 +151,13 @@ class DetailView: UIViewController {
             movieNameLabel.topAnchor.constraint(equalTo: movieImageView.bottomAnchor, constant: 20),
             
             starsContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            starsContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            //starsContainer.trailingAnchor.constraint(equalTo: otherDetailsContainer.leadingAnchor),
             starsContainer.topAnchor.constraint(equalTo: movieNameLabel.bottomAnchor, constant: 10),
             
+            //otherDetailsContainer.leadingAnchor.constraint(equalTo: starsContainer.leadingAnchor, constant: 20),
+            otherDetailsContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            otherDetailsContainer.topAnchor.constraint(equalTo: movieNameLabel.bottomAnchor, constant: 10),
+
             voteAverageFirstStar.leadingAnchor.constraint(equalTo: starsContainer.leadingAnchor),
             voteAverageFirstStar.topAnchor.constraint(equalTo: starsContainer.topAnchor),
             voteAverageFirstStar.bottomAnchor.constraint(equalTo: starsContainer.bottomAnchor),
@@ -140,9 +178,27 @@ class DetailView: UIViewController {
             movieVoteCount.topAnchor.constraint(equalTo: starsContainer.topAnchor),
             movieVoteCount.bottomAnchor.constraint(equalTo: starsContainer.bottomAnchor),
             
+            releaseDateImageView.leadingAnchor.constraint(equalTo: otherDetailsContainer.leadingAnchor),
+            releaseDateImageView.trailingAnchor.constraint(equalTo: releaseDateLabel.leadingAnchor),
+            
+            releaseDateLabel.leadingAnchor.constraint(equalTo: releaseDateImageView.trailingAnchor, constant: 20),
+            releaseDateLabel.trailingAnchor.constraint(equalTo: otherDetailsContainer.trailingAnchor),
+            releaseDateLabel.centerYAnchor.constraint(equalTo: releaseDateImageView.centerYAnchor),
+            releaseDateLabel.widthAnchor.constraint(equalToConstant: 75),
+            
+            languageImageView.leadingAnchor.constraint(equalTo: otherDetailsContainer.leadingAnchor),
+            languageImageView.trailingAnchor.constraint(equalTo: languageLabel.leadingAnchor),
+            languageImageView.topAnchor.constraint(equalTo: releaseDateImageView.bottomAnchor, constant: 5),
+            
+            languageLabel.leadingAnchor.constraint(equalTo: languageImageView.trailingAnchor, constant: 20),
+            languageLabel.trailingAnchor.constraint(equalTo: otherDetailsContainer.trailingAnchor),
+            languageLabel.topAnchor.constraint(equalTo: releaseDateLabel.bottomAnchor, constant: 5),
+            languageLabel.centerYAnchor.constraint(equalTo: languageImageView.centerYAnchor),
+            languageLabel.widthAnchor.constraint(equalToConstant: 75),
+            
             movieDescriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             movieDescriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            movieDescriptionLabel.topAnchor.constraint(equalTo: starsContainer.bottomAnchor, constant: 20)
+            movieDescriptionLabel.topAnchor.constraint(equalTo: starsContainer.bottomAnchor, constant: 40)
         ])
     }
 }
@@ -154,6 +210,10 @@ extension DetailView: DetailPresenterUI {
         movieImageView.kf.setImage(with: viewmodel.backdropPath)
         setupStars(viewmodel)
         movieVoteCount.text = "\(viewmodel.voteCount) votes"
+        releaseDateLabel.text = viewmodel.releaseDate
+        releaseDateImageView.image = UIImage(systemName: "calendar")
+        languageLabel.text = viewmodel.originalLanguage
+        languageImageView.image = UIImage(systemName: "globe")
         
         
     }

@@ -13,4 +13,6 @@ struct DetailMovieViewModel {
     let backdropPath: URL?
     let voteAverage: Float
     let voteCount: Int
+    let releaseDate: String
+    let originalLanguage: String
 }

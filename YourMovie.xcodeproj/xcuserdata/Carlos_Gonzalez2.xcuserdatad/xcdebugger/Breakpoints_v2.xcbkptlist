@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5C7DF8A6-9A64-41FF-AB26-74550981061C"
+            uuid = "8D17C1A2-B32E-41EB-8BC8-CD79461C539E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YourMovie/DetailMovie/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "setupStars(_:)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "updateUI(viewmodel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

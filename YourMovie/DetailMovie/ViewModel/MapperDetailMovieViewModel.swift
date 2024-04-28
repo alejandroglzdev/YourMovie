@@ -13,7 +13,9 @@ struct MapperDetailMovieViewModel {
               overview: entity.overview,
               backdropPath: URL(string: K.API.imageBaseURL + entity.backdropPath),
               voteAverage: entity.voteAverage / 2,
-              voteCount: entity.voteCount
+              voteCount: entity.voteCount,
+              releaseDate: entity.releaseDate,
+              originalLanguage: entity.originalLanguage.capitalized
         )
     }
 }
