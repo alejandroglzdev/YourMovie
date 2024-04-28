@@ -16,4 +16,8 @@ struct K {
         static let endpointPopularMovies = "/movie/popular"
         static let enpointMovieDetail = "/movie"
     }
+    
+    struct App {
+        static let appName = "YourMovie"
+    }
 }

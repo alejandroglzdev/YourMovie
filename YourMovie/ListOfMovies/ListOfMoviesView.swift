@@ -18,6 +18,12 @@ class ListOfMoviesView: UIViewController {
         return tableView
     }()
     
+    private var movieNavigationItem: UINavigationItem = {
+        let navigationItem = UINavigationItem()
+        navigationItem.title = K.App.appName
+        return navigationItem
+    }()
+    
     private let presenter: ListOfMoviesPresentable
     
     init(presenter: ListOfMoviesPresentable) {
@@ -32,19 +38,28 @@ class ListOfMoviesView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
         setupTableView()
         presenter.onViewAppear()
     }
     
     private func setupTableView() {
+        let navigationBar = UINavigationBar()
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
+        navigationBar.items = [movieNavigationItem]
+        
+        view.addSubview(navigationBar)
         view.addSubview(moviesTableView)
         
         NSLayoutConstraint.activate([
+            navigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            navigationBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            navigationBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            navigationBar.heightAnchor.constraint(equalToConstant: 44),
+            
             moviesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             moviesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             moviesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            moviesTableView.topAnchor.constraint(equalTo: view.topAnchor)
+            moviesTableView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor)
         ])
         
         moviesTableView.dataSource = self
